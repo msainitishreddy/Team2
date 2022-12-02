@@ -2,9 +2,13 @@ import java.util.Scanner;
 
 public class Math {
     /*
+    #################Team - M2#################
+    ###########################################
     Developer : Sai Nitish Kumar Reddy Maddela
     Uni ID : 220316811
-    Function : Addition
+    Function : Addition operation
+    ###########################################
+    ###########################################
      */
     public static int add(int x,int y){
         int result = x + y;
