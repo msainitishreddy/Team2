@@ -33,6 +33,19 @@ public class Math {
         }
         return maximum;
     }
+    /*
+    ###########################################
+    Developer : Sam Hung Cheung Chun
+    Uni ID : 220276515
+    Function : Subtraction operation
+    ###########################################
+    ###########################################
+    */
+    public static int subtract(int x,int y){
+        int result;
+        result = x-y
+        return result;
+    }
 
     public static void main(String[] args){
         System.out.println("Enter two numbers:");
@@ -41,6 +54,7 @@ public class Math {
         int b = kin.nextInt();
         System.out.println("Addition: "+a+"+"+b+" = "+add(a,b));
         System.out.println("Maximum of "+a+" , "+b+" : "+max(a, b));
+        System.out.println("Subtraction: "+a+"-"+b+" = "+subtract(a,b))
 
     }
 }
