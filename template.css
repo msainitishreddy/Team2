@@ -1,16 +1,15 @@
-/* Header styles */
 header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: #ffffff6c;
+    color: #000000;
   }
   
   .home-icon {
     font-size: 30px;
-    color: #fff;
+    color: #000000;
     text-decoration: none;
   }
 
@@ -42,17 +41,17 @@ header {
     display: block;
     padding: 10px;
     text-decoration: none;
-    color: #fff;
+    color: #000000;
     margin-left: 30%;
   }
   
   .header-products li.dropdown .dropdown-menu {
     position: absolute;
     top: 0;
-    left: 50%;
+    left: 70%;
     transform: translate(-50%, 0);
     background-color: #333;
-    color: #fff;
+    color: #000000;
     display: none;
     text-align: flex-start;
 }
@@ -70,8 +69,8 @@ header {
 
   /* Search bar styles */
   form {
-    width: 30%;
-    margin-left: 25%;
+    width: 25%;
+    margin-left: 0%;
   }
   
   form input[type="text"] {
@@ -87,7 +86,7 @@ header {
   
   .header-right-icon {
     font-size: 25px;
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     margin-left: 28px;
   }
@@ -102,7 +101,7 @@ header {
     top:100%;
     left: 50%;
     transform: translate(-50%, 0);
-    background-color: #333;
+    background-color: #fffbfb;
     color: #fff;
     font-size: 17px;
     display: none;
@@ -114,7 +113,7 @@ header {
     display: inline-block;
     padding: 10px;
     text-decoration: none;
-    color: #fff;
+    color: #000000;
   }
   
   .header-right-icon.account:hover .account-dropdown {
@@ -128,9 +127,9 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
-    padding: 20px;
+    padding: 30px;
   }
 
 
@@ -147,3 +146,4 @@ header {
     display: flex;
     justify-content: center;
   }
+

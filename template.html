@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="template.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <script src="template.js"></script>
+    <img src="logo.jpg" style="width: 80px; height:80px;">
   </head>
   <body>
     <header>
@@ -35,6 +36,7 @@
               <li><a href="#">Water Bottles</a></li>
               <li><a href="#">Bags</a></li>
               <li><a href="#">Caps</a></li>
+              <li><a href="#">Vests</a></li>
             </ul>
           </li> 
         </ul>
@@ -60,35 +62,51 @@
     </header>
     <main>
       <!-- Main body -->
-      <div class="image-container">
-        <img src="runningreference1.jpg" alt="Running Image">
-        <div class="image-text">Gear Up, Run Better</div>
-        <a href="#" class="shop-now-button">Shop Now</a>
+      <video width="1760" height="800" autoplay muted loop id="myVideo">
+        <source src="runningwoman2.mp4" type="video/mp4">
+    </video>
+    <div class="overlay">
+      <h1>Gear Up, Run Better</h1>
+      
+      <p> Shop our latest products and feel like a <sub></sub> pro.</p>
+    </div>
+    <body>
+      <div class="contentinfo">
+         <p> <strong>ProRunner is an independent athletic apparel brand.  We believe in making athletics simple by supplying apparel geared to your style and comfort to elevate your running experience. Our mission is to celebrate and cater to the global community of runners committed to the pursuit of athletic excellence, whether you are a novice, enthusiast or professional. Shop premium products designed to optimize and enhance your athletic performance and help you run like a pro.</strong></p>
       </div>
+   </body>
       <link rel="stylesheet" href="homepage.css">
       <div class="featured-products-container">
         <br /> <br />
         <h2>Featured Products</h2>
+
         <ul>
+          </li>
+          <div class="card">
+            <img src="item1.jpeg" style="width:300px;height:300px">
+            <h1> ProRuns Teal</h1>
+            <p class="price">£25</p>
+            <p><button>Add to Cart</button><p>
+          </div>
+
           <li>
-            <img src="item1.jpeg"/>
-            <p>item1</p>
-            <p>$25</p>
+            <div class="card">
+            <img src="item2.jpg" style="width:300px;height:400px">
+            <p>Adidas Tracksuit Bottoms</p>
+            <p>£25</p>
             <button>Add to Cart</button>
+            </div>
           </li>
           <li>
-            <img src="item2.jpg"/>
-            <p>item2</p>
-            <p>$25</p>
+            <div class="card">
+            <img src="item3.jpg" style="width:320px;height:400px">
+            <p>Adidas Original Long Sleeve</p>
+            <p>£25</p>
             <button>Add to Cart</button>
-          </li>
-          <li>
-            <img src="item3.jpg" />
-            <p>item3</p>
-            <p>$25</p>
-            <button>Add to Cart</button>
+            </div>
           </li>
         </ul>
+
         <br /> <br /> <br />
       </div>
       <div class="information">
@@ -105,6 +123,3 @@
     </main>
   </body>
 </html>
-
-
-
