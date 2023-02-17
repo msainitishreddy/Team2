@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>ProRunner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script src="template.js"></script>
+	<style>
+		.container {
+			display: flex;
+			width: 100%;
+			margin: 0 auto;
+    		}
+		.left-sidebar {
+            width: 20%;
+            float: left;
+            }
+    
+		.right-side {
+			width: 80%;
+			background-color: #fff;
+			padding: 20px;
+    		}
+		.category {
+            height: 50px;
+            margin: 10px;
+            padding: 10px;
+            text-align:center;
+            background-color: #f8eaea;
+            cursor: pointer;
+            font-size: larger;
+            }
+    .category-text{
+      font: bold;
+      font-size: larger;
+      padding: 7px;
+    }
+		.product {
+			display: inline-block;
+			width: 33%;
+      height: 400px;
+			margin-bottom: 20px;
+			text-align: center;
+      background-color: rgb(222, 222, 222);
+      box-shadow: 0px 0px 10px rgb(239, 247, 234);
+		}
+    .product button {
+     border: none;
+     outline: 0;
+     padding: 12px;
+     color: white;
+     background-color: #000;
+     text-align: center;
+     cursor: pointer;
+     width: 100%;
+     font-size: 18px;
+    }
+    .product a{
+      text-decoration: none;
+      color: black;
+    }
+		.product img {
+			width: auto;
+      height: 280px;
+		}
+		.product h3 {
+			margin-top: 10px;
+		}
+		.product p {
+			margin: 10px 0;
+		}
+    footer {
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 97%;
+    height: auto;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    position:relative;
+    }
+
+    body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    }
+
+    .information-left,
+    .information-center,
+    .information-right {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    }
+	</style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".category").click(function() {
+        var category = $(this).data("category");
+        $(".product").hide();
+        $(".product[data-category='" + category + "']").show();
+      });
+    });
+  </script>
+</head>
+<body>
+    <header>
+        <a href="homepage.html" class="home-icon">ProRunner</a>
+        <div class="header-products">
+          <ul>
+            <li><a href="product page_men.html">Men</a>
+              <ul class="men-dropdown">
+                <li><a href="product page_men.html">T-Shirts</a></li>
+                <li><a href="product page_men.html">Hoodies</a></li>
+                <li><a href="product page_men.html">Joggers</a></li>
+                <li><a href="product page_men.html">Shorts</a></li>
+                <li><a href="product page_men.html">Shoes</a></li>
+              </ul>
+            </li>
+            <li><a href="product page_women.html">Women</a>
+              <ul class="women-dropdown">
+                  <li><a href="product page_women.html">T-Shirts</a></li>
+                  <li><a href="product page_women.html">Hoodies</a></li>
+                  <li><a href="product page_women.html">Joggers</a></li>
+                  <li><a href="product page_women.html">Shorts</a></li>
+                  <li><a href="product page_women.html">Shoes</a></li>
+              </ul>
+            </li>
+            <li><a href="product page_accessories.html">Accessories</a>
+              <ul class="accessories-dropdown">
+                <li><a href="product page_accessories.html">Water Bottles</a></li>
+                <li><a href="product page_accessories.html">Bags</a></li>
+                <li><a href="product page_accessories.html">Caps</a></li>
+              </ul>
+            </li> 
+          </ul>
+        </div>
+        <form action="#">
+          <input type="text" placeholder="Search">
+        </form>
+        <div class="header-right">
+          <a href="#" class="header-right-icon wishlist">
+              <i class="fa fa-heart"></i>
+          </a>
+          <div class="header-right-icon account">
+              <i class="fas fa-user-circle"></i>
+            <div class="account-dropdown">
+              <a href="#"><i class="fas fa-user-circle"></i>   My Account</a>
+              <a href="#"><i class="fas fa-truck"></i>   My Orders</a>
+            </div>
+          </div>
+          <a href="#" class="header-right-icon cart">
+              <i class="fas fa-shopping-cart"></i>
+          </a>
+        </div>
+      </header>
+    <main>
+      <h1 style="margin-left: 60px;">Accessories</h1>
+    <div class="container">
+		<div class="left-sidebar">
+            <div class="category" onclick="javascript:location.reload()"><div class="category-text">All product</div></div>
+            <div class="category" data-category="1"><div class="category-text">Water Bottles</div></div>
+            <div class="category" data-category="2"><div class="category-text">Bags</div></div>
+            <div class="category" data-category="3"><div class="category-text">Caps</div></div>
+          </div>
+		<div class="right-side">
+			<div class="product" data-category="1">
+				<a href="#"><img src="../html/product image/accessories/water bottle.webp" alt="product1">
+				<h3>FC 750ml Water Bottle</h3>
+				<p>£10</p></a>
+                <button>Add to Cart</button>
+			</div>
+			<div class="product" data-category="1">
+				<a href="#"><img src="../html/product image/accessories/Water Bottles1.webp" alt="product1">
+				<h3>750ml Water Bottle</h3>
+				<p>£9</p></a>
+                <button>Add to Cart</button>
+			</div>
+			<div class="product" data-category="2">
+				<a href="#"><img src="../html/product image/accessories/bags.webp" alt="product1">
+				<h3>Jordan Pencil Case Backpack</h3></a>
+				<p>£30</p>
+                <button>Add to Cart</button>
+			</div>
+			<div class="product" data-category="3">
+				<a href="#"><img src="../html/product image/accessories/caps.webp" alt="product1">
+				<h3>New Era NBA Chicago Bulls 9FORTY Cap</h3>
+				<p>£30</p></a>
+                <button>Add to Cart</button>
+			</div>
+		</div>
+	</div>
+    </main>
+    <footer>
+    </div>
+      <div class="information-left">
+        <h3>About Us</h3>
+      </div>
+      <div class="information-center">
+        <h3>Contact Us</h3>
+      </div>
+      <div class="information-right">
+        <h3>Legal</h3>
+      </div>
+  </footer>
+</body>
+</html>
