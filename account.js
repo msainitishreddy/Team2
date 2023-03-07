@@ -19,7 +19,7 @@ loginForm.addEventListener('submit', function(event) {
         window.location.href = 'homepage.html?message=success';
       } else {
         // Show error message
-        alert('Invalid email or password');
+        alert('Your email or password is incorrect, please try again');
       }
     } else {
       alert('An error occurred');
