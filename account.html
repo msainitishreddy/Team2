@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>ProRunner</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="account.js"></script>
     <script src="https://kit.fontawesome.com/96f47d08ef.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontaw
     esome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
@@ -51,10 +53,10 @@
             <i class="fas fa-user-circle"></i>
           <div class="account-dropdown">
             <a href="account.html"><i class="fas fa-user-circle"></i>   My Account</a>
-            <a href="#"><i class="fas fa-truck"></i>   My Orders</a>
+            <a href="order.html"><i class="fas fa-truck"></i>   My Orders</a>
           </div>
         </div>
-        <a href="#" class="header-right-icon cart">
+        <a href="cart.html" class="header-right-icon cart">
             <i class="fas fa-shopping-cart"></i>
         </a>
       </div>
@@ -64,20 +66,20 @@
         <div class="login-container">
             <div class="login">
                 <h2>Login</h2>
-                <form>
+                <form id="login-form">
                   <div class="login-group">
                     <div class="input-field">
                       <i class="fa-solid fa-envelope"></i>
                       <label for="email">Email:</label> 
                       <input type="email" id="email" name="email" required>
-                  </div>
-                  <div class="input-field">
-                        <i class="fa-solid fa-lock"></i>
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" required> 
+                    </div>
+                    <div class="input-field">
+                      <i class="fa-solid fa-lock"></i>
+                      <label for="password">Password:</label>
+                      <input type="password" id="password" name="password" required> 
                     </div>
                   </div>
-                 <button type="submit">Login</button>
+                  <button id="login-button" type="submit">Login</button>
                 </form>
               </div>              
             <div class="create-account">
@@ -107,6 +109,4 @@
 </footer>
   </body>
 </html>
-
-
 
