@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ProRunner</title>
+    <link rel="stylesheet" href="supportpage.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header class="supportpage-header">
+      <a href="supportpage.html" ><img src="logo.jpg" class = "home-icon" style="width: 105px; height:40px;"></a>
+      <div class="header-products">
+        <ul>
+          <li><a href="product page_men.html">Men</a>
+            <ul class="men-dropdown">
+              <li><a href="product page_men.html">T-Shirts</a></li>
+              <li><a href="product page_men.html">Hoodies</a></li>
+              <li><a href="product page_men.html">Joggers</a></li>
+              <li><a href="product page_men.html">Shorts</a></li>
+              <li><a href="product page_men.html">Shoes</a></li>
+            </ul>
+          </li>
+          <li><a href="product page_women.html">Women</a>
+            <ul class="women-dropdown">
+                <li><a href="product page_women.html">T-Shirts</a></li>
+                <li><a href="product page_women.html">Hoodies</a></li>
+                <li><a href="product page_women.html">Joggers</a></li>
+                <li><a href="product page_women.html">Shorts</a></li>
+                <li><a href="product page_women.html">Shoes</a></li>
+            </ul>
+          </li>
+          <li><a href="product page_accessories.html">Accessories</a>
+            <ul class="accessories-dropdown">
+              <li><a href="product page_accessories.html">Water Bottles</a></li>
+              <li><a href="product page_accessories.html">Bags</a></li>
+              <li><a href="product page_accessories.html">Caps</a></li>
+              <li><a href="product page_accessories.html">Vests</a></li>
+            </ul>
+          </li> 
+        </ul>
+      </div>
+      <form action="#">
+        <input type="text" placeholder="Search">
+      </form>
+      <div class="header-right">
+        <a href="#" class="header-right-icon wishlist">
+            <i class="fa fa-heart"></i>
+        </a>
+        <div class="header-right-icon account">
+            <i class="fas fa-user-circle"></i>
+          <div class="account-dropdown">
+            <a href="account.html"><i class="fas fa-user-circle"></i>   My Account</a>
+            <a href="order.html"><i class="fas fa-truck"></i>   My Orders</a>
+          </div>
+        </div>
+        <a href="cart.html" class="header-right-icon cart">
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+      </div>
+      <div>
+        </header>
+
+    
+      <div class="needhelp">
+        <h1><center> NEED HELP?</center></h1>
+        </div>
+        <div class="faq">
+          <h2><center>FREQUENTLY ASKED QUESTIONS</center>
+            </h2>
+        </div>
+        <div class="row">
+          <div class="row-left">
+            <h3>DISPATCH & DELIVERY</h3>
+            <p><u>How long will it take my order to be delivered?</u></p>
+            <p><sub>Depending on your chosen delivery method between 3-5 working days. </sub></p>
+            <p><u> What are Pro Runner's delivery options?</u></p>
+            <p><sub>Customers can choose between Royal Mail, DPD and Evri. </sub></p>
+
+          </div>
+          <div class="row-center">
+            <h3>RETURNS & REFUNDS</h3>
+            <p><u>How do I return a product?</u></p>
+            <p><sub>Visit our returns portal by logging into your account and selecting 'make a return'. </sub></p>
+            <p><u>Can I exchange my product?</u></p>
+            <p><sub>Customers will need to return their product and recieve their refund and place a new order with their desired item. </sub></p>
+            <p><u> When will I get my refund?</u></p>
+            <p><sub>After we have recieved your package, your refund will be processed within 10 working days. </sub></p>
+
+          </div>  
+          <div class="row-right">
+            <h3>ORDERS</h3>
+            <p><u>Can I cancel or change my order?</u></p>
+            <p><sub>You may cancel your order within 24 hours of placing it, however once an order is places it cannot be changed. </sub></p>
+            <p><u>Does Pro Runner offer student discount?</u></p>
+            <p><sub>Unfortunately we do not currently offer student discount. </sub></p>
+            <p><u>How can I track my order?</u></p>
+            <p><sub>Upon dispatch of your order your chosen delivery method will send you a tackin gnumber so please keep checking your emails. </sub></p>
+
+          </div>
+        </div>
+      </div>
+ </section>
+</main>
+</body> 
+
+<footer>
+</div>
+  <div class="information-left">
+    <h3>SUPPORT</h3>
+    <ul>
+    <li><a href="contactus.html">Contact Us</a></li>
+    <li><a href="support.html">Frequently Asked Questions</a></li>
+    <li><a href="support.html">Shipping</a></li>
+    </ul>
+  </div>
+  <div class="information-center">
+    <h3>INFO</h3>
+    <ul>
+    <li><a href="aboutus.html">About Us</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="terms.html">Terms & Conditions</a></li>
+    </ul>
+  </div>
+  <div class="information-right">
+        <p class="copyright">Pro Runner © United Kingdom, 2023</p>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-envelope"></a>
+
+  </div>
+</div>
+</div>
+</footer>
+</html>
