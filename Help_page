@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ProRunner</title>
+    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script src="template.js"></script>
+    <style>
+      .in{
+            font-size: 20px;
+            width: 230px;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #dcd4fe;
+            color: #2b2b33;
+            margin-left: 31%;
+            margin-bottom: 10px;
+            padding: 4px 0;
+            display: inline-block;
+        }
+ 
+        .submit{
+            font-size: 20px;
+            color: #f8f8f8;
+            background: #000000;
+            width: 100px;
+            height: 40px;
+            border-radius: 15px;
+            border: none;
+        }
+        a{
+            color: #000;
+        }
+      </style>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="home-icon">ProRunner</a>
+      <div class="header-products">
+        <ul>
+          <li><a href="#">Men</a>
+            <ul class="men-dropdown">
+              <li><a href="#">T-Shirts</a></li>
+              <li><a href="#">Hoodies</a></li>
+              <li><a href="#">Joggers</a></li>
+              <li><a href="#">Shorts</a></li>
+              <li><a href="#">Shoes</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Women</a>
+            <ul class="women-dropdown">
+                <li><a href="#">T-Shirts</a></li>
+                <li><a href="#">Hoodies</a></li>
+                <li><a href="#">Joggers</a></li>
+                <li><a href="#">Shorts</a></li>
+                <li><a href="#">Shoes</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Accessories</a>
+            <ul class="accessories-dropdown">
+              <li><a href="#">Water Bottles</a></li>
+              <li><a href="#">Bags</a></li>
+              <li><a href="#">Caps</a></li>
+            </ul>
+          </li> 
+        </ul>
+      </div>
+      <form action="#">
+        <input type="text" placeholder="Search">
+      </form>
+      <div class="header-right">
+        <a href="#" class="header-right-icon wishlist">
+            <i class="fa fa-heart"></i>
+        </a>
+        <div class="header-right-icon account">
+            <i class="fas fa-user-circle"></i>
+          <div class="account-dropdown">
+            <a href="#"><i class="fas fa-user-circle"></i>   My Account</a>
+            <a href="#"><i class="fas fa-truck"></i>   My Orders</a>
+          </div>
+        </div>
+        <a href="#" class="header-right-icon cart">
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <!-- Main body -->
+      <table border="0" style="width: 860px; height: 600px; margin-left: auto; margin-right: auto; border-spacing: 3px;" >
+        <tr>
+          <td align="center" colspan="3">
+            <h1>NEED HELP?</h1>
+          </td>
+        </tr>
+          <td colspan="3">
+            <input type="text" class = "in"  placeholder = "Waht can we help with?" >
+            <button class="submit">search</button><br/>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" colspan="3">
+            <h2>FREQUENTLY ASKED QUESTIONS</h2>
+          </td>
+        </tr>
+        <tr style=" font-size: 18px;">
+            <td style="width: 31%;">
+                DISPATCH AND DELIVERY <br><br>
+                <a href="#">What is the delivery time?</a><br>
+                <a href="#">What are Pro Runner's delivery <br>
+                    options?</a><br><br>
+            </td>
+            <td style="width: 31%;">
+                RETURNS & REFUNDS <br><br>
+                <a href="#">How do I return a product?</a><br>
+                <a href="#">Can I exchange my products?</a><br>
+                <a href="#">When will I get my refund</a><br><br>
+            </td>
+            <td style="width: 31%;">
+                ORDERS <br><br>
+                <a href="#">Can I cancel or change my order?</a><br>
+                <a href="#">Does Pro Runner offer student discount?</a><br>
+                <a href="#">When will I get my refund</a>
+            </td>
+        </tr>
+      </table>
+
+        <br /> <br /> <br />
+      </div>
+      <div class="information">
+        <div class="information-left">
+          <h3>About Us</h3>
+        </div>
+        <div class="information-center">
+          <h3>Contact Us</h3>
+        </div>
+        <div class="information-right">
+          <h3>Legal</h3>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+
+
+
