@@ -73,22 +73,23 @@
             <table border="0" align="center" style="width: 100%;">
                 <tr>
                     <td style="width: 700px;">
-                        <?php include 'product_detail.php'; echo $product_image1; ?>
+                      <img th:src="${product.image}" />
                     </td>
                     <td>
                         <table border="0" style="height: 100%; width: 100%;">
                             <tr style="height: 150px; width: 100%;">
                                 <td>
                                     <h1 style="font-size: 2rem; color: black; font:bold;">
-                                        <?php include 'product_detail.php'; echo $product_name1; ?> 
+                                      <p style=" font-size: 20px;" th:text="${product.name}"></p> 
                                     </h1>
                                 </td>
                             </tr>
                             <tr style="height: 150px;">
                                 <td>
-                                    <p style=" font-size: 20px;"> £ <?php include 'product_detail.php'; echo $product_price1; ?></p>
+                                    <p style=" font-size: 20px;" th:text="'£' + ${product.price}"></p>
                                 </td>
                             </tr>
+            
                             <tr style="height: 150px;">
                                 <td>
                                   <button type="button" id="addToCartBtn" style="background-color: red; width: 200px; height: 60px; color: white;"> ADD TO CART </button>
@@ -103,9 +104,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2" style="font-size: 15px;">
-                        <?php include 'product_detail.php'; echo $product_description1; ?>
-                    </td>
+                    <td colspan="2" style="font-size: 15px;"
+                    th:text="${product.description}"></td>
                 </tr>
             </table>
         </main>        
