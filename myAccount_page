@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ProRunner</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  </head>
+  <style>
+    .accountForm{
+      text-align: left;
+      margin-left: 150px;
+    }
+    .accountForm p{
+      font: bolder;
+      font-size: larger;
+    }
+    .accountForm button{
+     border: none;
+     outline: 0;
+     padding: 12px;
+     color: white;
+     background-color: #000;
+     text-align: center;
+     cursor: pointer;
+     width: 200px;
+     font-size: 18px;
+     border-radius: 15px;
+    }
+    .accountForm table{
+      width: 460px; 
+      height: 640px; 
+      margin-left: auto; 
+      margin-right: auto; 
+      border-spacing: 3px;
+    }
+  </style>
+  <body>
+    <header class="homepage-header">
+        <a href="homepage.html" ><img src="logo.jpg" class = "home-icon" style="width: 105px; height:40px;"></a>
+        <div class="header-products">
+          <ul>
+            <li><a href="product page_men.html">Men</a>
+              <ul class="men-dropdown">
+                <li><a href="product page_men.html">T-Shirts</a></li>
+                <li><a href="product page_men.html">Hoodies</a></li>
+                <li><a href="product page_men.html">Joggers</a></li>
+                <li><a href="product page_men.html">Shorts</a></li>
+                <li><a href="product page_men.html">Shoes</a></li>
+              </ul>
+            </li>
+            <li><a href="product page_women.html">Women</a>
+              <ul class="women-dropdown">
+                  <li><a href="product page_women.html">T-Shirts</a></li>
+                  <li><a href="product page_women.html">Hoodies</a></li>
+                  <li><a href="product page_women.html">Joggers</a></li>
+                  <li><a href="product page_women.html">Shorts</a></li>
+                  <li><a href="product page_women.html">Shoes</a></li>
+              </ul>
+            </li>
+            <li><a href="product page_accessories.html">Accessories</a>
+              <ul class="accessories-dropdown">
+                <li><a href="product page_accessories.html">Water Bottles</a></li>
+                <li><a href="product page_accessories.html">Bags</a></li>
+                <li><a href="product page_accessories.html">Caps</a></li>
+                <li><a href="product page_accessories.html">Vests</a></li>
+              </ul>
+            </li> 
+          </ul>
+        </div>
+        <form action="#">
+          <input type="text" placeholder="Search">
+        </form>
+        <div class="header-right"> 
+          <a href="#" class="header-right-icon wishlist">
+              <i class="fa fa-heart"></i>
+          </a>
+          <div class="header-right-icon account">
+              <i class="fas fa-user-circle"></i>
+            <div class="account-dropdown">
+              <a href="account.html"><i class="fas fa-user-circle"></i>   My Account</a>
+              <a href="order.html"><i class="fas fa-truck"></i>   My Orders</a>
+            </div>
+          </div>
+          <a href="cart.html" class="header-right-icon cart">
+              <i class="fas fa-shopping-cart"></i>
+          </a>
+        </div>
+      </header>
+    <main>
+      <!-- Main body -->
+      <div class="accountForm">
+      <table border="0">
+        <tr>
+          <td colspan="2" style="height: 30%;">
+            <h1>MY ACCOUNT</h1>
+          </td>
+        </tr>
+        <tr >
+          <td >
+            <p>ID: </p> 
+          </td>
+          <td>
+          <p>Joe Bloggs</p> 
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Email: </p> 
+          </td>
+          <td>
+            <p>jd@gmail.com</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Number:</p> 
+          </td>
+          <td>
+            <p>+441234567890</p>
+          </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height: 150px;">
+              <button>Sign Out</button>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="height: 65%;">
+              
+            </td>
+          </tr>
+      </table>
+    </div>
+    </main>
+    <footer>
+    </div>
+      <div class="information-left">
+        <h3>About Us</h3>
+      </div>
+      <div class="information-center">
+        <h3>Contact Us</h3>
+      </div>
+      <div class="information-right">
+        <h3>Legal</h3>
+      </div>
+  </footer>
+  </body>
+</html>
