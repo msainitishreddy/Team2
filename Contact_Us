@@ -10,7 +10,7 @@
     color:red;
     }
 
-  .cotactButton{
+  .contactButton{
   display: inline-block;
   border-radius: 15px;
   background-color: #000000;
@@ -25,7 +25,7 @@
   margin: 5px;
 }
 
-.cotactButton span{
+.contactButton span{
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
@@ -33,7 +33,7 @@
   transition: 0.5s;
 }
 
-.cotactButton span:after {
+.contactButton span:after {
   content: '->';
   position: absolute;
   opacity: 0;
@@ -42,11 +42,11 @@
   transition: 0.5s;
 }
 
-.cotactButton:hover span {
+.contactButton:hover span {
   padding-right: 30px;
 }
 
-.cotactButton:hover span:after {
+.contactButton:hover span:after {
   opacity: 1;
   right: 0;
 }
@@ -144,7 +144,7 @@
         </tr>
         <tr style="height: 80px;">
           <td align="center">
-            <div class="cotactButton">
+            <div class="contactButton">
             <span>Submit</span></div>
         </td>
       </tr>
