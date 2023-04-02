@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ProRunner</title>
+  <link rel="stylesheet" href="../static/css/style-new.css" th:href="@{/css/style-new.css}" />
+</head>
+
+<body>
+  <header class="homepage-header">
+    <a href="homepage.html" th:href="@{/home}"><img src="../static/images/logo.jpg" th:src="@{/images/logo.jpg}"
+        class="home-icon" style="width: 150px; height:60px;" /></a>
+  </header>
+  <main>
+    <div class="addProduct">
+      <h1>Add New Product</h1>
+      <form th:action="@{/add-product}" id="create-account-form" method="post" autocomplete="off" th:object="${product}"
+        enctype="multipart/form-data">
+
+        <div class="addProduct-form-group">
+          <label for="product-name">Product Name:</label>
+          <input type="text" id="product-name" name="product-name" th:field="*{name}" required>
+        </div>
+        <div class="addProduct-form-group">
+          <label for="category-name">Category:</label>
+          <input type="text" id="category-name" name="category-name" th:field="*{category}" required>
+        </div>
+        <div class="addProduct-form-group">
+          <label for="category-type">Category-Type:</label>
+          <input type="text" id="category-type" name="category-type" th:field="*{categoryType}" required>
+        </div>
+        <div class="addProduct-form-group">
+          <label for="price">Price:</label>
+          <input type="text" id="price" name="price" th:field="*{price}" required>
+        </div>
+        <div class="addProduct-form-group">
+          <label for="description">Description:</label>
+          <input type="text" id="description" name="description" th:field="*{description}" required>
+        </div>
+        <!-- <div class="addProduct-form-group">
+              <label for="quantity">Quantity:</label>
+              <input type="text" id="quantity" name="quantity" th:field="*{quantity}" required>
+            </div> -->
+        <div class="addProduct-form-group">
+          <label for="product-img">Product Image</label>
+          <input type="file" id="file" name="product-image" th:field="*{file}" required>
+        </div>
+        <br />
+        <button type="submit" class="addProduct-button">Add Product</button>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>

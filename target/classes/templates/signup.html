@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ProRunner</title>
+  <link rel="stylesheet" href="../static/css/style-new.css" th:href="@{/css/style-new.css}" />
+  <script src="https://kit.fontawesome.com/96f47d08ef.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+  <header class="homepage-header">
+    <a href="homepage.html" th:href="@{/home}" ><img src="../static/images/logo.jpg" th:src="@{/images/logo.jpg}" class = "home-icon" style="width: 105px; height:40px;"/></a>
+    <div class="header-products">
+      <ul>
+        <li><a th:href="@{/products/Men}" href="product page_men.html">Men</a>
+          <ul class="men-dropdown">
+            <li><a th:href="@{/products/Men/T-shirt}" href="product page_men.html">T-Shirts</a></li>
+            <li><a th:href="@{/products/Men/Hoodies}" href="product page_men.html">Hoodies</a></li>
+            <li><a th:href="@{/products/Men/Joggers}" href="product page_men.html">Joggers</a></li>
+            <li><a th:href="@{/products/Men/Shorts}" href="product page_men.html">Shorts</a></li>
+            <li><a th:href="@{/products/Men/Shoes}" href="product page_men.html">Shoes</a></li>
+          </ul>
+        </li>
+        <li><a th:href="@{/products/Women}" href="product page_women.html">Women</a>
+          <ul class="women-dropdown">
+            <li><a th:href="@{/products/Women/T-shirt}" href="product page_women.html">T-Shirts</a></li>
+            <li><a th:href="@{/products/Women/Hoodies}" href="product page_women.html">Hoodies</a></li>
+            <li><a th:href="@{/products/Women/Joggers}" href="product page_women.html">Joggers</a></li>
+            <li><a th:href="@{/products/Women/Shorts}" href="product page_women.html">Shorts</a></li>
+            <li><a th:href="@{/products/Women/Shoes}" href="product page_women.html">Shoes</a></li>
+          </ul>
+        </li>
+        <li><a th:href="@{/products/Accessories}" href="product page_accessories.html">Accessories</a>
+          <ul class="accessories-dropdown">
+            <li><a th:href="@{/products/Accessories/Water Bottles}" href="product page_accessories.html">Water Bottles</a></li>
+            <li><a th:href="@{/products/Accessories/Bags}" href="product page_accessories.html">Bags</a></li>
+            <li><a th:href="@{/products/Accessories/Caps}" href="product page_accessories.html">Caps</a></li>
+            <li><a th:href="@{/products/Accessories/Vests}" href="product page_accessories.html">Vests</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <form action="#">
+      <input type="text" placeholder="Search">
+    </form>
+    <div class="header-right">
+      <div class="header-right-icon account">
+        <i class="fas fa-user-circle"></i>
+        <div class="account-dropdown">
+          <!-- <a href="account.html" th:href="@{/login}"><i class="fas fa-user-circle"></i>   My Account</a>
+          <a href="order.html"><i class="fas fa-truck"></i>   My Orders</a> -->
+          <form sec:authorize="!isAuthenticated()" method="get" th:action="@{/login}">	
+            <input type="submit" name="login" value="Login"/></form>
+            
+            <form sec:authorize="isAuthenticated()" method="post" th:action="@{/logout}">	
+            <input  type="submit" name="logout" value="Logout" />
+          </form>
+        </div>
+      </div>
+      <a  th:if="${#authorization.expression('hasAuthority(''USER'')')}" th:href="@{/my-cart}" href="cart.html"  class="header-right-icon cart">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a th:if="${#authorization.expression('hasAuthority(''ADMIN'')')}" th:href="@{/add-product}" href="addproduct.html"  class="header-right-icon cart">
+        <i class="fa-solid fa-plus"></i>
+        </a>
+    </div>
+  </header>
+  <main>
+    <div class="signup">
+      <h1>Create Account</h1>
+      <form th:action="@{/user-register}" id="create-account-form" method="post" autocomplete="off" th:object="${user}">
+
+        <div class="signup-form-group">
+          <label for="first-name">First Name:</label>
+          <input type="text" id="first-name" name="first-name" th:field="*{firstName}" required>
+        </div>
+        <div class="signup-form-group">
+          <label for="last-name">Last Name:</label>
+          <input type="text" id="last-name" name="last-name" th:field="*{lastName}" required>
+        </div>
+        <div class="signup-form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" th:field="*{email}" required>
+        </div>
+        <div class="signup-form-group">
+          <label for="address">Address:</label>
+          <input type="address" id="address" name="address" th:field="*{address}" required>
+        </div>
+        <div class="signup-form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" th:field="*{password}" required>
+        </div>
+        <div class="signup-form-group">
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password" required>
+        </div>
+        <br />
+        <button type="submit" class="signup-button">Create Account</button>
+      </form>
+    </div>
+  </main>
+  <br /><br />
+  <footer>
+    </div>
+    <div class="footer-col">
+      <h3>SUPPORT</h3>
+      <li><a th:href="@{/contact-us}" href="contactUs.html">Contact Us</a></li>
+      <li><a th:href="@{/support}"href="support.html">Frequently Asked Questions</a></li>
+  
+    </div>
+    <div class="footer-col">
+      <h3>INFO</h3>
+      <li><a th:href="@{/about-us}" href="aboutUs.html">About Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="copyright">Pro Runner © United Kingdom, 2023</p>
+      <a href="https://www.facebook.com/Pro-Runner-118608607827850" class="fa fa-facebook"></a>
+      <a href="https://twitter.com/ProRunnerhelp" class="fa fa-twitter"></a>
+      <a href="https://www.instagram.com/prorunner.help/" class="fa fa-instagram"></a>
+      <a th:href="@{/support}" class="fa fa-envelope"></a>
+    </div>
+    </div>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <header class="homepage-header">
+        <a href="homepage.html" th:ref="@{/home}" ><img src="../static/images/logo.jpg" th:src="@{/images/logo.jpg}" class = "home-icon" style="width: 150px; height:60px;"/></a>
+      </header>  
+    
+      <!-- Main body -->
+      <main>
+      <table border="0" style="width: 860px; height: 600px; margin-left: auto; margin-right: auto; padding: 10%;" >
+        <tr>
+          <td align="center">
+            <h2 style="font-size: 200%;">Welcome Administrator, Please Log In</h2>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+              Enter your email address <span>*</span>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input type="text" style="width: 500px; height: 30px;">
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            Password*
+          </td>
+        </tr>
+
+        <tr>
+          <td align="center">
+            <input type="text" style="width: 500px; height: 30px;">
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <button type="submit">Login </button>
+        </td>
+      </tr>
+    </table>
+  </body>
+</main>
+</html>

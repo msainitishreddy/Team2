@@ -1,0 +1,295 @@
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.home-icon {
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Header Products Column*/
+
+.header-products ul li ul {
+  display: none;
+}
+
+.header-products ul li:hover > ul {
+  display: block;
+}
+
+
+.header-products ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-products li.dropdown {
+  position: relative;
+}
+
+.header-products a {
+  font-size: 17px;
+  white-space: nowrap;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  margin-left: 30%;
+}
+
+.header-products li.dropdown .dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #333;
+  color: #fff;
+  display: none;
+  text-align: flex-start;
+}
+
+
+/* Search bar styles */
+form {
+  width: 30%;
+  margin-left: 25%;
+}
+
+form input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  font-size: 17px;
+}
+
+/* Header Right */
+.header-right {
+  display: flex;
+}
+
+.header-right-icon {
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 28px;
+}
+
+.header-right-icon.account {
+  position: relative;
+}
+
+.account-dropdown {
+  z-index: 1;
+  position: absolute;
+  top:100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #333;
+  color: #fff;
+  font-size: 17px;
+  display: none;
+  text-align: left;
+}
+
+.account-dropdown a {
+  white-space: nowrap;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.header-right-icon.account:hover .account-dropdown {
+  display: block;
+}
+
+
+/* Information styles(in the bottom of every page) */
+footer {
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 97%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+}
+
+.information-left,
+.information-center,
+.information-right {
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+}
+
+/*login section*/
+  .login-container {
+    display: flex;
+    margin: 20px 0;
+    padding: 10px;
+  }
+
+  .login, .create-account {
+    width: 50%;
+    margin: 30px;
+    padding: 20px;
+    }
+  
+  .login {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+  }
+  
+  
+  .login .login-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+
+  /*creation account section in account page*/
+  .create-account {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  
+  .create-account ul {
+    list-style-type: disc;
+  }
+  
+  .create-account button {
+    margin-bottom: 32px;
+  }
+  
+
+  /*signup form*/
+.signup {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+    
+    .signup h1 {
+    text-align:left;
+    font-size: 30px;
+    margin-bottom: 30px;
+    }
+    
+    .signup-form-group {
+    margin-bottom: 15px;
+    }
+    
+    .signup-form-group label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 15px;
+    }
+    
+    .signup-form-group input {
+    display: block;
+    width: 150%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+    
+   .signup-button{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    }
+  
+  
+    .cart-page {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .cart-table {
+      width: 70%;
+    }
+    
+    .cart-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .cart-table th,
+    .cart-table td {
+      text-align: center;
+      padding: 10px;
+    }
+    
+    .cart-table th {
+      font-weight: bold;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    .cart-table img {
+      display: inline-block;
+      width: 80px;
+      height: 100px;
+      margin-right: 10px;
+    }
+
+    
+    .cart-table td input[type="number"] {
+      width: 50px;
+      text-align: center;
+    }
+    
+    .cart-payment {
+      width: 25%;
+    }
+    
+    .cart-payment h2 {
+      margin-top: 0;
+    }
+    
+    .cart-payment p {
+      font-weight: bold;
+    }
+
+    .cart-payment button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      }
+      
+      .cart-payment button:hover {
+      background-color: #45a049;
+      }

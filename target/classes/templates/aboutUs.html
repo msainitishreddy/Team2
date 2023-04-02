@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8">
+    <title>ProRunner</title>
+  
+    <link rel="stylesheet" href="../static/css/style-new.css" th:href="@{/css/style-new.css}" />
+    <script src="https://kit.fontawesome.com/96f47d08ef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" 
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+<body>
+  <header class="homepage-header">
+    <a href="homepage.html" th:href="@{/home}" ><img src="../static/images/logo.jpg" th:src="@{/images/logo.jpg}" class = "home-icon" style="width: 105px; height:40px;"/></a>
+    <div class="header-products">
+      <ul>
+        <li><a th:href="@{/products/Men}" href="product page_men.html">Men</a>
+          <ul class="men-dropdown">
+            <li><a th:href="@{/products/Men/T-shirt}" href="product page_men.html">T-Shirts</a></li>
+            <li><a th:href="@{/products/Men/Hoodies}" href="product page_men.html">Hoodies</a></li>
+            <li><a th:href="@{/products/Men/Joggers}" href="product page_men.html">Joggers</a></li>
+            <li><a th:href="@{/products/Men/Shorts}" href="product page_men.html">Shorts</a></li>
+            <li><a th:href="@{/products/Men/Shoes}" href="product page_men.html">Shoes</a></li>
+          </ul>
+        </li>
+        <li><a th:href="@{/products/Women}" href="product page_women.html">Women</a>
+          <ul class="women-dropdown">
+            <li><a th:href="@{/products/Women/T-shirt}" href="product page_women.html">T-Shirts</a></li>
+            <li><a th:href="@{/products/Women/Hoodies}" href="product page_women.html">Hoodies</a></li>
+            <li><a th:href="@{/products/Women/Joggers}" href="product page_women.html">Joggers</a></li>
+            <li><a th:href="@{/products/Women/Shorts}" href="product page_women.html">Shorts</a></li>
+            <li><a th:href="@{/products/Women/Shoes}" href="product page_women.html">Shoes</a></li>
+          </ul>
+        </li>
+        <li><a th:href="@{/products/Accessories}" href="product page_accessories.html">Accessories</a>
+          <ul class="accessories-dropdown">
+            <li><a th:href="@{/products/Accessories/Water Bottles}" href="product page_accessories.html">Water Bottles</a></li>
+            <li><a th:href="@{/products/Accessories/Bags}" href="product page_accessories.html">Bags</a></li>
+            <li><a th:href="@{/products/Accessories/Caps}" href="product page_accessories.html">Caps</a></li>
+            <li><a th:href="@{/products/Accessories/Vests}" href="product page_accessories.html">Vests</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <form action="#">
+      <input type="text" placeholder="Search">
+    </form>
+    <div class="header-right">
+      <div class="header-right-icon account">
+        <i class="fas fa-user-circle"></i>
+        <div class="account-dropdown">
+          <!-- <a href="account.html" th:href="@{/login}"><i class="fas fa-user-circle"></i>   My Account</a>
+          <a href="order.html"><i class="fas fa-truck"></i>   My Orders</a> -->
+          <form sec:authorize="!isAuthenticated()" method="get" th:action="@{/login}">	
+            <input type="submit" name="login" value="Login"/></form>
+            
+            <form sec:authorize="isAuthenticated()" method="post" th:action="@{/logout}">	
+            <input  type="submit" name="logout" value="Logout" />
+          </form>
+        </div>
+      </div>
+      <a  th:if="${#authorization.expression('hasAuthority(''USER'')')}" th:href="@{/my-cart}" href="cart.html"  class="header-right-icon cart">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a th:if="${#authorization.expression('hasAuthority(''ADMIN'')')}" th:href="@{/add-product}" href="addproduct.html"  class="header-right-icon cart">
+        <i class="fa-solid fa-plus"></i>
+        </a>
+    </div>
+  </header>
+
+  <body>
+    <div class="aboutUs">
+      <h1> <strong>Our Mission </strong> </h1>
+      <h2>Connecting people To Their Passion</h2>
+      <p> <strong> Who We Are </strong></p>
+      <p> At Pro Runner, we put people first. We hold our core values at the centre of our all of our business
+        activities and we operate under a culture of togetherness and integrity. We believe that running is more than a
+        sport. Its a lifestyle, one that inspires courage, passion and resillience. We strive to empower our community
+        of runners to do what they love through supplying them with high quality sports gear and apparel. Follow us on
+        <a href="https://instagram.com/prorunner.help?igshid=YmMyMTA2M2Y=" target="_blank"> <strong> instagram </strong>
+        </a>to find out more about us or email us at <strong>prorunner.help@gmail.com </strong> for any queries. </a>
+        Join the global community and get running!
+      </p>
+      <p> <strong> Our Core Values </strong></p>
+      <p>We are deeply committed to the concept of social responsibility and sustainability. It is in our ethical code
+        of conduct to supply sustainably made apparel derived from ethical sources and help reduce environmental waste.
+        All clothing materials are made from 100% cotton, polyester blends to sustain the longest durability needs for
+        our customers. Shop with Pro Runner to support local farmers and further fair trade business across the globe.
+        At ProRunner, we pride ourselves on groundbreaking innovation. We believe that new ideas improve the way people
+        exercise and play sport. Shop our latest footwear collection made with the latest technology to unlock a new
+        level of performance. </p>
+      <img class="sustainability img" style="float: left; padding: 20px;" src="sustainability.jpg" th:src="@{images/sustainability.jpg}" alt="sustainability"
+        width="550" height="300">
+      <img style="float:left; padding: 20px;" src="runninggoodforyou.jpg" th:src="@{images/runninggoodforyou.jpg}" alt="runninggoodforyou" width="500"
+        height="300">
+    </div>
+  </body>
+  <footer>
+  </div>
+  <div class="footer-col">
+    <h3>SUPPORT</h3>
+    <li><a th:href="@{/contact-us}" href="contactUs.html">Contact Us</a></li>
+    <li><a th:href="@{/support}" href="support.html">Frequently Asked Questions</a></li>
+
+  </div>
+  <div class="footer-col">
+    <h3>INFO</h3>
+    <li><a th:href="@{/about-us}" href="aboutUs.html">About Us</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+      <p class="copyright">Pro Runner © United Kingdom, 2023</p>
+      <a href="https://www.facebook.com/Pro-Runner-118608607827850" class="fa fa-facebook"></a>
+      <a href="https://twitter.com/ProRunnerhelp" class="fa fa-twitter"></a>
+      <a href="https://www.instagram.com/prorunner.help/" class="fa fa-instagram"></a>
+      <a th:href="@{/support}" class="fa fa-envelope"></a>
+  </div>
+  </div>
+  </div>
+</footer>
+</body>
+
+</html>
